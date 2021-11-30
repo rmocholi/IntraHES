@@ -1,0 +1,22 @@
+
+
+<div class="container contact-form">
+  <div class="contact-image">
+      <img src="../../../assets/img/admin.png" alt="rocket_contact"/>
+  </div>
+  <form method="post" (ngSubmit)="auth()" #form="ngForm">
+      <h3>Introduzca la contraseña</h3>
+     <div class="row">
+          <div class="col-md-12">
+              <div class="form-group ">
+                  <input type="password" name="pw" class="form-control" placeholder="Contraseña" ngModel />
+              </div>
+          </div>
+          <div class="mx-auto">
+            <div class="form-group p-1">
+              <input type="submit" class="btn btn-danger py-1 px-4" value="Entrar"/>
+            </div>
+        </div>
+      </div>
+  </form>
+</div>

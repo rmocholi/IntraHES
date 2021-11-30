@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PagingService } from './paging.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'IntraHES';
+  selection:number = 0;
+
+  constructor(pagingService : PagingService){
+    pagingService.selectionUpdated.subscribe((sel:number) => {
+      this.selection = sel;
+    })
+  }
+
 }
